@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # ref: https://blog.csdn.net/crewkickse/article/details/130982674
 # ref: https://www.jianshu.com/p/b3fc0d36954d
 
@@ -21,5 +23,5 @@ cat ../../SRR_Acc_List_scATAC-seq.txt | while read id; do (./prefetch ${id} --ou
 # RNA-seq data from: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRX16982404&o=acc_s%3Aa
 cat ../../SRR_Acc_List_scRNA-seq.txt | while read id; do (./prefetch ${id} ../../ --output-directory ../../bio_class_data/rna);done
 
-./sratoolkit.2.10.9-ubuntu64/bin/fastq-dump --gzip --split-3 -O bio_class_data/rna/SRR20963892/ bio_class_data/rna/SRR20963892/SRR20963892.sra
-./sratoolkit.2.10.9-ubuntu64/bin/fastq-dump --gzip --split-3 -O bio_class_data/atac/SRR20963896/ bio_class_data/atac/SRR20963896/SRR20963896.sra
+./sratoolkit.2.10.9-ubuntu64/bin/fastq-dump --gzip --split-3 -O bio_class_data/rna/ bio_class_data/rna/*.sra
+./sratoolkit.2.10.9-ubuntu64/bin/fastq-dump --gzip --split-3 -O bio_class_data/atac/ bio_class_data/atac/*.sra
