@@ -66,20 +66,26 @@ done
 for atac_file in "${atac_files[@]}"; do
     echo "Running for $atac_file"
 
-    atac_folder="bio_class_data/atac"
-    atac_folder_fastp="bio_class_data/atac_fastp"
+    atac_folder="bio_class_data/atac/"
+    atac_folder_fastp="bio_class_data/atac_fastp/"
 
     run_quality_control "$atac_folder" "$atac_folder_fastp" "$atac_file"
 done
 
+# multiqc
+# pip install multiqc
 cd bio_class_data/rna
 multiqc .
+cd ../../
 
 cd bio_class_data/rna_fastp
 multiqc .
+cd ../../
 
 cd bio_class_data/atac
 multiqc .
+cd ../../
 
 cd bio_class_data/atac_fastp
 multiqc .
+cd ../../
