@@ -1,3 +1,11 @@
 bio_class_data/
 sratoolkit.2.10.9-ubuntu64/
+refdata-gex-mm10-2020-A/
+cellranger-7.2.0/
+cellranger-6.1.2/
+cellranger-2.0.2/
+results/
+code/
 *.gz
+refdata-cellranger-arc-mm10-2020-A-2.0.0/
+nohup.out
